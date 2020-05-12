@@ -1,1 +1,1 @@
-#hello there
+# minimax-algorithm
