@@ -1,5 +1,7 @@
 x=['X','X','X']
 o=['O','O','O']
+p1='X'
+ai='O'
 # X is player
 # O is AI
 # T is tie
@@ -33,9 +35,25 @@ def PosWin(maze):
 		if([maze[j][i] for j in range(len(maze))]==o):
 			return 'O'
 	return 'T'
+def minmax(maze,turn):
+
+def bestmove(maze):
+	for i in range(3):
+		for j in range(3):
+			if(maze[i][j]==''):
+				maze[i][j]='O'
+				a=minmax(maze,'')
+				maze[i][j]=''
+	maze[a[0]][a[1]]='O'
 
 def main():	
-	mat=[['X','p','X'],['X','p','p'],['X','p','p']]
+	mat=[['','','X'],['','',''],['','','']]
+	print(maze)
+	while('' in maze):
+		i,j=map(int,input().split())
+		maze[i][j]='X'
+		bestmove(maze)
+
 	print(PosWin(mat))
 
 
