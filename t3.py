@@ -16,7 +16,7 @@ def PosWin(maze):
 	for i in maze:
 		if i==x:
 			return 'X'
-		else:
+		elif(i==o):
 			return 'O'
 	if(maze[0][0]=='X' and maze[1][1]=='X' and maze[2][2]=='X'):
 		return 'X'
@@ -38,7 +38,8 @@ def PosWin(maze):
 				return ''
 	return 'T'
 def main():	
-	mat=[['','',''],['','',''],['','','']]
+	mat=[['X','p','X'],['p','X','p'],['p','p','X']]
+	print(PosWin(mat))
 
 
 if __name__== "__main__":
