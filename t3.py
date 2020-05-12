@@ -32,13 +32,10 @@ def PosWin(maze):
 	for i in range(len(maze)):
 		if([maze[j][i] for j in range(len(maze))]==o):
 			return 'O'
-	for i in range(3):
-		for j in range(3):
-			if(maze[i][j]==''):
-				return ''
 	return 'T'
+
 def main():	
-	mat=[['X','p','X'],['p','X','p'],['p','p','X']]
+	mat=[['X','p','X'],['X','p','p'],['X','p','p']]
 	print(PosWin(mat))
 
 
