@@ -36,18 +36,28 @@ def PosWin(maze):
 			return 'O'
 	return 'T'
 def minimax(maze,turn):
-	if()
+	if(turn==ai):
+		for i in range(3):
+		    for j in range(3):
+		    	if (maze[i][j]==''):
+		    		maze[i][j]='O'
+		    		score=minimax(maze,p1)
+		    		
+		    		
+
+
 def bestmove(maze):
 	for i in range(3):
 		for j in range(3):
 			if(maze[i][j]==''):
 				maze[i][j]='O'
-				a=minimax(maze,'')
+				a=minimax(maze,'O')
 				maze[i][j]=''
 	maze[a[0]][a[1]]='O'
 
+
 def main():	
-	mat=[['','','X'],['','',''],['','','']]
+	mat=[['','',''],['','',''],['','','']]
 	print(maze)
 	while('' in maze):
 		i,j=map(int,input().split())
