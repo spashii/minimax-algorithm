@@ -35,14 +35,14 @@ def PosWin(maze):
 		if([maze[j][i] for j in range(len(maze))]==o):
 			return 'O'
 	return 'T'
-def minmax(maze,turn):
-
+def minimax(maze,turn):
+	if()
 def bestmove(maze):
 	for i in range(3):
 		for j in range(3):
 			if(maze[i][j]==''):
 				maze[i][j]='O'
-				a=minmax(maze,'')
+				a=minimax(maze,'')
 				maze[i][j]=''
 	maze[a[0]][a[1]]='O'
 
